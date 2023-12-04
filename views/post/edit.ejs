@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/stylesheets/partials/hf.css">
+    <link rel="stylesheet" href="/stylesheets/post/edit.css">
+    <link rel="stylesheet" href="/stylesheets/post/index.css">
+    <title>Edit Post</title>
+</head>
+<body>
+    <%- include('../partials/header') -%>
+    <main>
+        <div class="form-container">
+            <form action="#" method="POST">
+                <div class="header fp">
+                    <h2>Edit Article</h2>
+                </div>
+
+                <div class="category-post fp">
+                    <div class="title">
+                        <small>Jenis article</small>
+                    </div>
+                    <div class="input-fp">
+                        <div>
+                            <input type="radio" name="category" id="news" required>
+                            <label for="news">news</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="category" id="chart">
+                            <label for="chart">chart</label>
+                        </div>
+                        <div> 
+                            <input type="radio" name="category" id="review">
+                            <label for="review">review</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="title-post fp">
+                    <div class="title">
+                        <small>
+                            <label for="title">Judul article</label>
+                        </small>
+                    </div>
+                    <div class="input-fp">
+                        <input class="title-form" type="text" name="title" id="title" spellcheck="false"  required>
+                    </div>
+                </div>
+
+                <div class="img-post fp">
+                    <div class="title">
+                        <small>
+                            <label for="img">
+                                Gambar header
+                            </label>
+                        </small>
+                    </div>
+                    <div class="input-fp">
+                        <input class="input-file" type="file" name="img" id="img" accept="image/png, image/jpeg" required>
+                    </div>
+                </div>
+
+                <div class="pgph-post fp">
+                    <div class="pgph-container">
+                        <div class="title">
+                            <small>
+                                <label for="pgph-1">
+                                    Paragraf
+                                </label>
+                            </small>
+                        </div>
+                        <div class="input-fp">
+                            <textarea class="textarea-form"  name="pgph[]" id="pgph-1" cols="30" rows="10" spellcheck="false"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="media-button pgph-btn fp">
+                    <button id="add-pgph" type="button" class="add-paragraph"><span><i class="fas fa-plus"></i></span> Tambah paragraf</button>
+                    <button type="button" id="remove-pgph" class="remove-pgph"><span><i class="fas fa-trash-alt"></i></span> Hapus Paragraf</button>
+                </div>
+
+                <div class="list-post fp">
+                    <div class="list-container">
+                        <div class="title-container-list">
+                            <div class="title-list">
+                                <small>
+                                    <label for="title-list-1">Title list</label>
+                                </small>
+                            </div>
+
+                            <div class="input-fp">
+                                <input class="title-form" type="text" name="title-list[]" id="title-list-1" spellcheck="false">
+                            </div>
+
+                        </div>
+
+                        <div class="img-container-list">
+                            <div class="img-list">
+                                <small>
+                                    <label for="img-list-1">Gambar list</label>
+                                </small>
+                            </div>
+        
+                            <div class="input-fp">
+                                <input class="input-file" type="file" name="img-list[]" id="img-list-1" accept="image/png, image/jpeg">
+                            </div>
+                        </div>
+                        
+                        <div class="desc-container-list">
+                            <div class="desc -list">
+                                <small>
+                                    <label for="desc-list-1">Deskripsi list</label>
+                                </small>
+                            </div>
+    
+                            <div class="input-fp">
+                                <textarea class="textarea-form" name="desc-list[]" id="desc-list-1" cols="50" rows="10"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="media-button list-btn fp">
+                    <button id="add-list" type="button" class="add-list"><span><i class="fas fa-plus"></i></span> Tambah list</button>
+                    <button type="button" id="remove-list" class="remove-list"><span><i class="fas fa-trash-alt"></i></span> Hapus list</button>
+                </div>
+
+                <div class="tag-post fp">
+                    <div class="title">
+                        <small>
+                            <label for="tag">
+                                Tag post
+                            </label>
+                        </small>
+                    </div>
+                    <div class="input-fp">
+                        <input class="input-tag" type="text" name="tag" id="tag" required>
+                    </div>
+                </div>
+
+                <div class="media-button fp">
+                    <button id="submit-button" type="submit" class="submit-button">Save & Preview</button>
+                </div>
+                
+            </form>
+        </div>
+    </main>
+    <%- include('../partials/footer') -%>
+</body>
+</html>

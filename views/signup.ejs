@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/stylesheets/partials/hf.css">
+    <link rel="stylesheet" href="/stylesheets/partials/form.css">
+    <title>Signup</title>
+</head>
+<body>
+    <%- include('./partials/header') -%>
+    <main>
+        <div class="signup-container sl">
+            <form action="#" method="POST">
+                <div class="title">
+                    <h1>Sign up</h1>
+                </div>
+                
+                <div class="user-cont fl">
+                    <small>
+                        <label for="username">Name</label>
+                    </small>
+                    <input type="text" id="username" name="username" maxlength="20" spellcheck="false" required>
+                </div>
+
+                <div class="email-cont fl">
+                    <small>
+                        <label for="email">Email</label>
+                    </small>
+                    <input type="email" id="email" name="email" spellcheck="false" required>
+                </div>
+
+                <div class="pass-cont fl">
+                    <small>
+                        <label for="password">Password</label>
+                    </small>
+                    <div class="password-input">
+                        <input type="password" id="password" name="password" spellcheck="false" minlength="6" required>
+                        <button type="button" id="vis-pass"><span><i class="far fa-eye"></i></span></button>
+                    </div>
+                </div>
+
+                <!-- <div class="rm-cont fl">
+                    <input type="checkbox" id="rm" name="rm">
+                    <small><label for="rm">Remember me</label></small>
+                </div> -->
+
+                <button class="submit" type="submit fl">signup</button>
+            </form>
+
+            <div class="other fl">
+                <div class="regist-link">
+                    <small>Sudah punya akun? <a href="/home/login">Login</a></small>
+                </div>
+
+                <div class="forgot-pass">
+                    <small><a href="#">Lupa password?</a></small>
+                </div>
+            </div>
+        </div>
+    </main>
+    <%- include('./partials/footer') -%>
+    <script src="/scripts/form.js"></script>
+</body>

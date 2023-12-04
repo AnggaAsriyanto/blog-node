@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/stylesheets/partials/hf.css">
+    <link rel="stylesheet" href="/stylesheets/partials/form.css">
+    <link rel="stylesheet" href="/stylesheets/user/edit.css">
+    <title>Profile Edit</title>
+</head>
+<body>
+    <%- include('./partials/header') -%>
+    <main>
+        <div class="form-container sl">
+            <form action="#">
+                <div class="title">
+                    <h1>Edit Profile</h1>
+                </div>
+
+                <div class="bgr-profile fl">
+                    <small>
+                        <label for="bgr-profile">Background profile</label>
+                    </small>
+                    <input type="file" name="background-profile" id="bgr-profile">
+                </div>
+
+                <div class="photo-profile fl">
+                    <small>
+                        <label for="photo-profile">Photo profile</label>
+                    </small>
+                    <input type="file" name="photo-profile" id="photo-profile">
+                </div>
+
+                <div class="username-profile fl">
+                    <small>
+                        <label for="username-profile">Username</label>
+                    </small>
+                    <input type="text" name="username-profile" id="username-profile" maxlength="20">
+                </div>
+
+                <div class="desc-profile fl">
+                    <small>
+                        <label for="desc-profile">Description</label>
+                    </small>
+                    <textarea name="desc-profile" id="desc-profile" cols="30" rows="10" maxlength="300"></textarea>
+                </div>
+
+                <button type="submit" class="submit">Save</button>
+
+            </form>
+        </div>
+    </main>
+    <%- include('./partials/footer') -%>
+</body>
+</html>

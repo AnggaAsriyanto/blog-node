@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    width: 100vw;
+    height: max-content;
+    margin-top: 8vh;
+}
+
+main .heading-info {
+    width: 100%;
+    height: 35vh;
+    background-color: wheat;
+}
+
+main .post-section {
+    height: max-content;
+    padding: 1rem;
+}
+
+section .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pagination {
+    width: 100vw;
+    height: max-content;
+    margin-top: 2rem;
+}
+
+.pagination, ul {
+    display: flex;
+    justify-content: center;
+}
+
+.pagination ul {
+    padding: 10px;
+    border-radius: 12px;
+    background-color: rgba(83, 226, 236, 0.1);
+}
+
+.pagination button {
+    background-color: transparent;
+    border: none;
+    height: 40px;
+    width: 40px;
+    margin: auto 0.3rem;
+    font-size: 1.3rem;
+}
+
+.pagination ul li {
+    list-style: none;
+    color: rgb(89, 175, 255);
+    font-size: inherit;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0.2rem;
+    border-radius: 5px;
+    /* border: 1px solid rgb(89, 175, 255); */
+}
+
+.pagination li.active {
+    color: #fff;
+    background-color: rgb(83, 226, 236);
+    border: none;
+}
